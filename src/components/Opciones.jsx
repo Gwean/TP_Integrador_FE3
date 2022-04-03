@@ -5,7 +5,7 @@ export default class Opciones extends Component {
     return (
       <div className='opciones'> 
           <div className='opcion'>
-                <button id='A' className='botones'>
+                <button id='A' className='botones' onClick={this.props.click}>
                     A
                 </button>
                 <h2>
@@ -13,7 +13,7 @@ export default class Opciones extends Component {
                 </h2>
           </div>
           <div className='opcion'>
-                <button id='B' className='botones'>
+                <button id='B' className='botones' onClick={this.props.click}>
                     B
                 </button>
                 <h2 >

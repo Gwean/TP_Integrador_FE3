@@ -11,12 +11,30 @@ export default class Layout extends Component {
         historia: data,
         contador : 0,
         historial : []
+        
     }
-
-   // this.update=this.update.bind(this); Si es function, debemos usar el bind
   }
+
 componentDidMount(){
     alert("Me acabo de crear");
+}
+
+handleClick = (clickEvento) => {
+    let cont = 0;
+    let temp = [];
+    const id = clickEvento.target.id;
+    if (id === "A"){
+      cont ++;
+    } else if (id === "B") {
+      cont +=2;
+    }
+    temp =  this.state.historial;
+    temp.push(id)
+    this.setState({
+      contador : this.state.contador + cont,
+      historial : temp
+    })
+
 }
   render() {
       //Estructura basica Layout > 
@@ -30,6 +48,7 @@ componentDidMount(){
         />
         <Opciones
          opciones = {this.state.historia[this.state.contador].opciones}
+         click = {this.handleClick}
         />
 
       </div>
