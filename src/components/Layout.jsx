@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import data from './data.json'
 import '../index.css'
 import Historia from './Historia';
+import Opciones from './Opciones';
 
 export default class Layout extends Component {
   constructor() {
@@ -26,6 +27,9 @@ componentDidMount(){
       <div className='layout'>
         <Historia 
           historia = {this.state.historia[this.state.contador].historia}
+        />
+        <Opciones
+         opciones = {this.state.historia[this.state.contador].opciones}
         />
 
       </div>
