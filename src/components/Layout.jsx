@@ -31,9 +31,11 @@ export default class Layout extends Component {
       this.state.historia[this.state.contador].opciones.a === "FIN" ||
       this.state.historia[this.state.contador].opciones.b === "FIN"
     ) {
-      alert("Fin");
-      this.setState({contador: 0});
-      return;
+      alert("Fin, Jugar De Nuevo?");
+      this.setState({contador: 0,
+        historial: []});
+        return;
+
 
     } else if (this.state.utlimoState === "A") {
       if (id === "A") {
