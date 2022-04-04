@@ -18,6 +18,7 @@ export default class Layout extends Component {
   }
 
   componentDidMount() {
+    alert("Trabajo Integrador de Mondino Georgina");
     alert("Bienvenido a Elige tu propia aventura.");
   }
 
