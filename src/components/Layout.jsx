@@ -32,9 +32,8 @@ export default class Layout extends Component {
       this.state.historia[this.state.contador].opciones.b === "FIN"
     ) {
       alert("Fin");
-      this.componentWillUnmount();
+      this.setState({contador: 0});
       return;
-
 
     } else if (this.state.utlimoState === "A") {
       if (id === "A") {
@@ -66,14 +65,17 @@ export default class Layout extends Component {
         <Historia
           historia={this.state.historia[this.state.contador].historia}
         />
+
         <Opciones
           opciones={this.state.historia[this.state.contador].opciones}
           click={this.handleClick}
         />
+
         <Recordatorio
           recordatorio={this.state.utlimoState}
           historial={this.state.historial}
         />
+
       </div>
     );
   }
